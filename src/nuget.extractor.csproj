@@ -5,15 +5,14 @@
 		<TargetFrameworks>net45;net472</TargetFrameworks>
 	</PropertyGroup>
 
-	<!-- <ItemGroup Condition="'$(TargetFramework)'=='net5.0'">
-		<PackageReference Include="NuGet.Packaging" Version="5.8.0-*" />
-		<PackageReference Include="NuGet.Protocol" Version="5.8.0-*" />
-	</ItemGroup> -->
 	<ItemGroup Condition="'$(TargetFramework)'=='net45'">
 		<PackageReference Include="NuGet.Packaging.Extraction" Version="5.8.0-xprivate" />
 		<PackageReference Include="NuGet.Protocol" Version="5.8.0-xprivate" />
 	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net472'">
+
+	<!-- NuGet.Packaging 5.7.0 added xplat signing support for net5.0. 
+	     We'll bug fix in 5.8.0 or 5.7.x as needed. -->
+	<ItemGroup Condition=" '$(TargetFramework)'=='net472' or '$(TargetFramework)'=='net5.0' ">
 		<PackageReference Include="NuGet.Packaging" Version="5.7.0-*" />
 		<PackageReference Include="NuGet.Protocol" Version="5.7.0-*" />
 	</ItemGroup>
