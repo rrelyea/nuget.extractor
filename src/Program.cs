@@ -19,7 +19,7 @@ namespace nuget.extractor
             var version = new NuGetVersion("5.6.0");
             PackageIdentity package = new PackageIdentity(id, version);
             var logger = NullLogger.Instance;
-            var packageDownloader = new NuGet.Protocol.LocalPackageArchiveDownloader("c:\\packages\\source",
+            var packageDownloader = new LocalPackageArchiveDownloader("c:\\packages\\source",
                                         "c:\\packages\\other",
                                         package,
                                         NullLogger.Instance);

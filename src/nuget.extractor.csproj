@@ -2,12 +2,11 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFrameworks>net45;net472;net5.0</TargetFrameworks>
+		<TargetFrameworks>net45</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net45'">
-		<PackageReference Include="NuGet.Packaging.Extraction" Version="5.8.0-xprivate" />
-		<PackageReference Include="NuGet.Protocol" Version="5.8.0-xprivate" />
+		<PackageReference Include="NuGet.Packaging.Extraction" Version="5.8.0-preview.2.6774" />
 	</ItemGroup>
 
 	<!-- NuGet.Packaging 5.7.0 added xplat signing support for net5.0. 
